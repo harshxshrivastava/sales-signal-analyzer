@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: process.env.BACKEND_SERVICE_URL,
   headers: {
     "Content-Type": "application/json",
   },
@@ -19,3 +19,4 @@ export const analyzeTranscript = async (
 
   return response.data;
 };
+
