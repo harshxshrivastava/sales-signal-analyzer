@@ -7,10 +7,15 @@ const API = axios.create({
   },
 });
 
-export const analyzeTranscript = async (transcript) => {
-  const response = await API.post("/analyse", {
-    transcript,
-  });
+export const analyzeTranscript = async (
+  transcript
+) => {
+  const response = await API.post(
+    "/analyse",
+    {
+      transcript,
+    }
+  );
 
   return response.data;
 };
