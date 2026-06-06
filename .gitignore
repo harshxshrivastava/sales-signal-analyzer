@@ -43,6 +43,7 @@ frontend/build/
 
 # Node.js
 backend/node_modules/
+frontend/node_modules/
 
 # Package Lock Files (Optional)
 # package-lock.json
