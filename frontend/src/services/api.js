@@ -1,22 +1,16 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_SERVICE_URL,
+  baseURL: import.meta.env.BACKEND_API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-export const analyzeTranscript = async (
-  transcript
-) => {
-  const response = await API.post(
-    "/analyse",
-    {
-      transcript,
-    }
-  );
+export const analyzeTranscript = async (transcript) => {
+  const response = await API.post("/analyse", {
+    transcript,
+  });
 
   return response.data;
 };
-
